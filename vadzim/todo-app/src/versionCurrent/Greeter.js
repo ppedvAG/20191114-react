@@ -1,12 +1,26 @@
 import React from "react";
 import DateTime from "./DateTime";
 
-export default function Greeter() {
-  
+export default class Greeter extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+        uhr: <DateTime />
+    }
+} 
+unmountUhr() {  
+  this.setState({
+    uhr: <p>hier war die Uhr</p>
+  })  
+}
+render() {
   return (
     <div>
-      <h1>Hallo, React Version 16!</h1>
-      <p>heute ist: <DateTime /></p>
+      <h1>Hallo, {this.props.name}!</h1>
+      <div>Heute ist {this.state.uhr}</div>
+      <button onClick={() => this.unmountUhr()}>Versteck die Uhr</button>   
     </div>
   );
 }
+}
+
