@@ -32,13 +32,13 @@ git_n_github > github > getting started (mit Lab)
 
 ### M10 SLIDES
 
+react > getting started
+
 nodejs > nodejs > getting started (ohne lab)
 
 nodejs > npmjs > intro (ohne lab)
 
 nodejs > npx > intro (ohne lab)
-
-react > getting started
 
 ### M10 LINKS
 
@@ -65,6 +65,8 @@ TODO APP
 ## MODULE 20 | JSX INTRO
 
 ### M20 SLIDES
+
+react > react globals
 
 react > react & jsx > intro
 
