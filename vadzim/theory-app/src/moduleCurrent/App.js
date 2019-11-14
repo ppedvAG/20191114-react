@@ -1,16 +1,16 @@
-import React from 'react';
-import MyClassComp from './MyClassComp';
-import MyClassCompWState from './MyClassCompWState';
+import React from "react";
+import PwdConfirm from "./PwdConfirm";
 
-export function App() {
+
+function App() {
+  
   return (
     <div>
-      <h1>Class Comp & State</h1>
-      <h2>Ne simple Klassenkomponenten</h2>
-      <MyClassComp text="Alle class-Komponenten"/>
-      <hr/>
-      <h2>Ne Klassenkomponente mit State</h2>
-      <MyClassCompWState />
-    </div>    
+      <h1>Modul 6. React & Forms</h1>
+      <h2>Inputfelder und State</h2>
+      <PwdConfirm />  
+    </div>
   );
 }
+
+export default App;
