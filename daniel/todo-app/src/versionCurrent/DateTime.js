@@ -1,9 +1,23 @@
-import React from 'react';
+import React, {Component} from 'react';
 
-function DateTime() {
+class DateTime extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+        time: new Date().toTimeString()
+    }
+    setInterval(()=> this.calcNewTime() , 1000);
+  }
+
+ calcNewTime(){
+   this.setState({time: new Date().toTimeString()})
+ }
+
+  render()
+  {
   return (
-    <div>{new Date().toLocaleDateString()}</div>
+    <div>{new Date().toLocaleDateString()}{this.state.time}</div>
   );
-}
+}}
  
 export default DateTime;
