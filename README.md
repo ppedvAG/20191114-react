@@ -70,6 +70,8 @@ react > react globals
 
 react > react & jsx > intro
 
+vscode > emmet
+
 ### M20 LINKS
 
 [jsx intro](https://reactjs.org/docs/introducing-jsx.html)
