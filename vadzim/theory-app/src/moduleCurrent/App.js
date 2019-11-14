@@ -1,16 +1,34 @@
-import React from "react";
-import PwdConfirm from "./PwdConfirm";
+import React from 'react';
 
+export default class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            meldung: ""
+        }
+    }
+    componentDidCatch() {
+        // catched Error
+    }
 
-function App() {
-  
-  return (
-    <div>
-      <h1>Modul 6. React & Forms</h1>
-      <h2>Inputfelder und State</h2>
-      <PwdConfirm />  
-    </div>
-  );
+    componentDidMount() {
+        this.setState({meldung: this.state.meldung + ' component did mount'})
+    }
+
+    componentWillUnmount() {
+        window.console.log('good bye');
+        this.setState({meldung: this.state.meldung + ' component will unmount'});
+    }
+
+    render() {
+        return(
+            <div>
+                <h1>Lifecycle Methods</h1>
+                <p>{this.props.text}</p>
+                <p>{this.state.meldung}</p>
+            </div>
+        )
+
+    }
 }
 
-export default App;
