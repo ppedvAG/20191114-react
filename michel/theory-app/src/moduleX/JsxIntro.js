@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 
 export function JSXExpression() {
     return (
@@ -22,4 +23,17 @@ export function JSXrendersNoBooleans() {
             <p>Wert von IsTrue = {isTrue}</p>
         </div>
     );
-} 
+}
+
+export function JSXElementsAreObjects(){
+    const el = <div><p>Text</p></div>;
+    return typeof el;
+    // return el;
+}
+
+export function JSXvsCreateEl(){
+    return React.createElement("header", null, 
+        React.createElement("h2", null, "Mit CreateElements erzeugt"), 
+        React.createElement("p", null, "Inhalt"))
+
+}
