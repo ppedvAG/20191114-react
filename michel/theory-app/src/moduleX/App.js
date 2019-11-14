@@ -1,12 +1,10 @@
 import React from 'react';
-import * as comps from './Components';
+import PasswordInput from './PasswordInput';
 
 function App() {
   return (
     <div>
-      <comps.AllComponents />
-      <hr/>
-      <comps.FuncComponent content="Blub" />
+      <PasswordInput />
     </div>
   );
 }
