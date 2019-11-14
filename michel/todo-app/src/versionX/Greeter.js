@@ -1,12 +1,12 @@
 import React from 'react';
+import DateTime from './DateTime';
 
-
-function Greeter() {
+function Greeter(props) {
     var date = new Date();
     return (
         <header>
-            <h2>Hallo Michel</h2>
-            <p>Heute ist der {date.toLocaleDateString()}</p>
+            <h2>Hallo {props.Name}</h2>
+            <p>Heute ist der <DateTime /></p>
         </header>
     );
 }
