@@ -1,23 +1,16 @@
 import React from 'react';
-import * as jsx from './JSXintro';
+import MyComponent from './myComponent';
+import MyComponentWProps from './myComponentWProps';
+
 
 export function App() {
   return (
     <div>
-      <h1>Thema JSX intro</h1>
-      <hr/>
-      <h2>JSX: HTML & JS</h2>
-      <jsx.JSXExpression />
-      <hr/>
-      <h2>JSX braucht ein Elternelement</h2>
-      <jsx.JSXManyEls />
-      <hr/>
-      <h2>JSX gibt keine Booleans aus</h2>
-      <jsx.JSXrendersNoBooleans />
-      <hr/>
-      <h2>JSX ist syntaktischer Zucker für React.createElement()</h2>
-      <jsx.JSXElsAreObjects />
-      <jsx.JSXvsCreateEl />
+     <h1>Function Components & Props</h1>
+     <MyComponent />
+     <hr/>
+     <h1>Comp W Props</h1>
+     <MyComponentWProps gift1="Geschenk von oben" gift2="Geschenk von oben"/>
     </div>    
   );
 }
