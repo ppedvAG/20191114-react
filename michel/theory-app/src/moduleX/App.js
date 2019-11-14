@@ -1,20 +1,12 @@
 import React from 'react';
-import * as jsx from './JsxIntro';
+import * as comps from './Components';
 
 function App() {
   return (
     <div>
-      <h1>Thema JSX Intro</h1>
+      <comps.AllComponents />
       <hr/>
-      <jsx.JSXExpression />
-      <hr />
-      <jsx.JSXManyEls />
-      <hr/>
-      <jsx.JSXrendersNoBooleans />
-      <hr/>
-      <jsx.JSXElementsAreObjects />
-      <hr />
-      <jsx.JSXvsCreateEl/>
+      <comps.FuncComponent content="Blub" />
     </div>
   );
 }
