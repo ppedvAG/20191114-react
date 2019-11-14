@@ -1,11 +1,15 @@
-import React from 'react';
-import Greeter from './Greeter'
-import Rating from './Rating';
+import React from "react";
+import Greeter from "./Greeter";
+import Rating from "./Rating";
+import Todos from './Todos';
+import './App.css';
 
 function App() {
   return (
-    <div><Greeter city='Dresden'/>
-    <div>Das Essen bei dem Tschechen war <Rating stars={5} /></div>
+    <div>
+      <Greeter />
+      <Rating stars={5} />
+      <Todos />
     </div>
   );
 }

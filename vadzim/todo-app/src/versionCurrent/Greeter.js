@@ -1,13 +1,12 @@
-import React from 'react';
-import DateTime from './DateTime';
+import React from "react";
+import DateTime from "./DateTime";
 
-function Greeter(props) {
+export default function Greeter() {
+  
   return (
     <div>
-      <p> hi, React Kurs in {props.city}!</p>
-      <DateTime />
-     </div>
+      <h1>Hallo, React Version 16!</h1>
+      <p>heute ist: <DateTime /></p>
+    </div>
   );
 }
-
-export default Greeter;
