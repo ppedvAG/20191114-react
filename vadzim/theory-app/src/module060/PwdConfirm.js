@@ -11,7 +11,7 @@ export default class PwdConfirm extends React.Component {
   }
 
   handleChange(ev) {
-    console.log(ev.target.id + " " + ev.target.value);
+    // console.log(ev.target.id + " " + ev.target.value);
     if (ev.target.id === "inp1") {
       this.setState({ inp1Value: ev.target.value });
     } else {

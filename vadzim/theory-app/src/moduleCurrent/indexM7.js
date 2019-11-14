@@ -7,8 +7,16 @@ import * as serviceWorker from './serviceWorker';
 // import App from './module000/App';
 import App  from './moduleCurrent/App';
 
+let root = document.getElementById('root');
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+ReactDOM.render(<App text="textVonIndexjs" />, root);
+
+function unmount() {
+    ReactDOM.unmountComponentAtNode(root);
+}
+
+window.setTimeout(unmount, 2000);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
