@@ -1,16 +1,16 @@
 import React from 'react';
-import MyComponent from './myComponent';
-import MyComponentWProps from './myComponentWProps';
-
+import MyClassComp from './MyClassComp';
+import MyClassCompWState from './MyClassCompWState';
 
 export function App() {
   return (
     <div>
-     <h1>Function Components & Props</h1>
-     <MyComponent />
-     <hr/>
-     <h1>Comp W Props</h1>
-     <MyComponentWProps gift1="Geschenk von oben" gift2="Geschenk von oben"/>
+      <h1>Class Comp & State</h1>
+      <h2>Ne simple Klassenkomponenten</h2>
+      <MyClassComp text="Alle class-Komponenten"/>
+      <hr/>
+      <h2>Ne Klassenkomponente mit State</h2>
+      <MyClassCompWState />
     </div>    
   );
 }
