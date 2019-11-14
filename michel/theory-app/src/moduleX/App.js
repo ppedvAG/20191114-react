@@ -11,6 +11,10 @@ function App() {
       <jsx.JSXManyEls />
       <hr/>
       <jsx.JSXrendersNoBooleans />
+      <hr/>
+      <jsx.JSXElementsAreObjects />
+      <hr />
+      <jsx.JSXvsCreateEl/>
     </div>
   );
 }
