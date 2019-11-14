@@ -1,16 +1,12 @@
-import React from 'react';
+import React from "react";
+import DateTime from "./DateTime";
 
-function Greeter() {
-  let date = new Date();
+export default function Greeter() {
+  
   return (
     <div>
-      <p> hi, React Kurs in Dresden!</p>
-      <p>Heute ist: {date.toLocaleDateString()}</p>
-      {/* <p>Heute ist: {Date().toLocaleDateString()}</p> */}
-      {/* Date() gibt String zurück */}
-      <p>Heute ist: {Date().toString()}</p>
-     </div>
+      <h1>Hallo, React Version 16!</h1>
+      <p>heute ist: <DateTime /></p>
+    </div>
   );
 }
-
-export default Greeter;

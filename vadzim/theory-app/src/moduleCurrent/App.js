@@ -1,16 +1,16 @@
-import React from 'react';
-import MyComponent from './myComponent';
-import MyComponentWProps from './myComponentWProps';
+import React from "react";
+import PwdConfirm from "./PwdConfirm";
 
 
-export function App() {
+function App() {
+  
   return (
     <div>
-     <h1>Function Components & Props</h1>
-     <MyComponent />
-     <hr/>
-     <h1>Comp W Props</h1>
-     <MyComponentWProps gift1="Geschenk von oben" gift2="Geschenk von oben"/>
-    </div>    
+      <h1>Modul 6. React & Forms</h1>
+      <h2>Inputfelder und State</h2>
+      <PwdConfirm />  
+    </div>
   );
 }
+
+export default App;
