@@ -1,16 +1,24 @@
 import React from 'react';
 import './App.css';
 import Greeter from './Greeter';
-import ToDoList from './ToDoList';
+import ToDoListContainer from './ToDoListContainer';
+import ToDoInput from './ToDoInput';
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
+import rootReducer from './reducers'
+
+const store = createStore(rootReducer);
+
 
 function App() {
-    return (        
+    return (
         <div>
-            
-        <Greeter Name="Michel"/>
-        <ToDoList />
+            <Provider store={store}>
+                <Greeter Name="Michel" />
+                <ToDoListContainer />
+                <ToDoInput />
+            </Provider>
         </div>
-        )
-        ;
+    );
 }
 export default App;

@@ -1,15 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import {connect} from 'react-redux';
+import {addTodo} from './actions/index';
 
-export default function ToDoInput(props) {
-
-    const [inputTitle, setTitle] = useState("");
-    const [inputRating, setRating] = useState(0);
-
+const ToDoInput = ({dispatch}) => {
+    let titleInput;
+    let ratingInput;
     return (
-        <div >
-            <input placeholder="Neuer Eintrag" value={inputTitle} onChange={event => setTitle(event.target.value)} />
-            <input type="number" value={inputRating} onChange={event => setRating(event.target.value)} />
-            <input type="submit" value="Hinzufügen" onClick={() => props.onClick(inputTitle, inputRating)} disabled={inputTitle === null || inputTitle === ""} />
-        </div>
+        <form onSubmit={e => {
+            e.preventDefault();
+            if(!titleInput.value.trim())
+                return;
+            dispatch(addTodo(titleInput.value, ratingInput.value));
+            titleInput.value = '';
+            ratingInput.value = '';            
+        }}>
+            <input placeholder="Neuer Eintrag" ref={node => titleInput = node} />
+            <input type="number" ref={node => ratingInput = node} />
+            <input type="submit" value="Hinzufügen"  />
+        </form>
     )
 }
+
+export default connect()(ToDoInput);
