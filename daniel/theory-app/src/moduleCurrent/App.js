@@ -1,5 +1,6 @@
 import React from 'react';
 import * as jsx from './JSXintro';
+import Login from './Login';
 
 function App() {
   return (
@@ -12,6 +13,8 @@ function App() {
       <jsx.JSXrendersNoBooleans></jsx.JSXrendersNoBooleans>
       <hr></hr>
       <jsx.JSXElsAreObjects></jsx.JSXElsAreObjects>
+
+      <Login></Login>
     </div>
   );
 }
