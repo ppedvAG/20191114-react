@@ -4,20 +4,9 @@ class DateTime extends Component {
   constructor(props){
     super(props);
     this.state={
-        time: new Date().toTimeString(),
-        intV: ""
+        time: new Date().toTimeString()
     }
-    
-  }
-
-  componentDidMount(){
-    this.setState({intV:setInterval(()=> this.calcNewTime() , 1000)});
-  }
-
-  componentWillUnmount(){
-    console.log(this.intV)
-    this.setState({intV:""});
-    console.log(this.intV)
+    setInterval(()=> this.calcNewTime() , 1000);
   }
 
  calcNewTime(){
