@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import ToDo from './ToDo';
 import Rating from './Rating';
-import ToDoInput from './ToDoInput';
 
 export default class ToDoList extends Component {
     constructor(props) {
@@ -18,14 +17,11 @@ export default class ToDoList extends Component {
 
     render() {
         return (
-            <div>
-                <ul>
-                    {this.state.toDos.map(e =>
-                        <li key={e.id.toString()}><span className={elementClass(e.completed)}>{e.title}</span> <Rating NumberOfStars={e.rating} /></li>
-                    )}
-                </ul>
-                <ToDoInput />
-            </div>
+            <ul>
+                {this.state.toDos.map(e =>
+                    <li key={e.id.toString()}><span className={elementClass(e.completed)}>{e.title}</span> <Rating NumberOfStars={e.rating} /></li>
+                )}
+            </ul>
         );
     }
 }
