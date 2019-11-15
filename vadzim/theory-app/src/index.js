@@ -35,7 +35,8 @@ import './module000/index.css';
 // nehmen sie Inhalt für diese Datei aus module70/indexM7.js
 
 // 8. 
-import App from './moduleCurrent/App';
+// import App from './moduleCurrent/App';
+import App from './moduleCurrent/AppWithClass';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

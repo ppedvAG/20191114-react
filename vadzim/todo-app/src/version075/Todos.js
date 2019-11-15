@@ -25,20 +25,17 @@ export default class Todos extends React.Component {
     this.setState({
       todos: newTodos
     })
-
   }
   
   render() {
     return (
       <div>
-        <div>
-            
-        <input type="text" value={this.state.inputText} onChange={event => this.handleChange(event.target.value)}/>
-        <button onClick={() => this.addTodo()}>ADD</button>
-       
-        </div>
+        <AddTodo onClick={addTodo(titleUser)}
 
-        
+
+   {/*      <input type="text" value={this.state.inputText} onChange={event => this.handleChange(event.target.value)}/>
+        <button onClick={() => this.addTodo()}>ADD</button> */}
+       
         <table>
           <thead>
             <tr>
