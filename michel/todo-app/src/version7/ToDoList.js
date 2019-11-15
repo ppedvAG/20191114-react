@@ -13,18 +13,15 @@ export default class ToDoList extends Component {
                 new ToDo(3, "Aufgabe3", true, 2),
                 new ToDo(4, "Aufgabe4", false, 10)
             ]
-        };        
+        };
     }
 
-    componentDidMount(){
-        fetch('https://jsonplaceholder.typicode.com/todos')
-            .then(response => response.json())
-            .then(json => this.setState({ toDos: json }));
-    }
-
-    addToDo(title, rating) {
+    addToDo(title, rating)
+    {
         var n = new ToDo(this.state.toDos.length + 1, title, false, rating);
-        this.setState({toDos: this.state.toDos.concat(n)});
+        this.setState({
+            toDos: this.state.toDos.concat(n)
+        });
     }
 
     render() {
@@ -35,12 +32,11 @@ export default class ToDoList extends Component {
                         <li key={e.id.toString()}><span className={elementClass(e.completed)}>{e.title}</span> <Rating NumberOfStars={e.userId} /></li>
                     )}
                 </ul>
-                <ToDoInput onClick={(t, r) => this.addToDo(t, r)} />
-            </div >
+                <ToDoInput onClick={(t, r) => this.addToDo(t, r)}/>
+            </div>
         );
     }
 }
-
 
 function elementClass(completed) {
     if (completed)

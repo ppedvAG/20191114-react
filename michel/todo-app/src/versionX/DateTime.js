@@ -1,34 +1,17 @@
-import { Component } from 'react';
+import { useState, useEffect } from 'react';
 
-export default class DateTime extends Component {
-    constructor(props)
-    {
-        super(props);
-        this.state = {
-            date: new Date()
-        };
-        
-    }
+export default function DateTime(props) {
+
+    const [date, setDate] = useState(new Date());
     
-    componentDidMount() {
-        let id = setInterval(() => this.tick(), 1000);
-        this.setState({intervalid: id});
-    }
-
-    componentWillUnmount()
-    {
-        console.log("Unmounting " + this.state.intervalid);      
-        window.clearInterval(this.state.intervalid);
-    }
-
-    tick()
-    {
-        this.setState({date : new Date()});
-    }
-
-    render() {
-        return (
-            this.state.date.toLocaleString()
-        );
-    }
+    useEffect(() => {
+        let id = setInterval(() => setDate(new Date()), 1000);
+        return () => {
+            window.clearInterval(id);
+        }
+    });
+    
+    return (
+        date.toLocaleString()
+    );
 }
