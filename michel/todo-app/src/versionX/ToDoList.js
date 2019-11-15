@@ -8,12 +8,20 @@ export default class ToDoList extends Component {
         super(props);
         this.state = {
             toDos: [
-                new ToDo(1, "Aufgabe1", true, 4, ""),
-                new ToDo(2, "Aufgabe2", false, 5, ""),
-                new ToDo(3, "Aufgabe3", true, 2, ""),
-                new ToDo(4, "Aufgabe4", false, 10, "")
+                new ToDo(1, "Aufgabe1", true, 4),
+                new ToDo(2, "Aufgabe2", false, 5),
+                new ToDo(3, "Aufgabe3", true, 2),
+                new ToDo(4, "Aufgabe4", false, 10)
             ]
         };
+    }
+
+    addToDo(title, rating)
+    {
+        var n = new ToDo(this.state.toDos.length + 1, title, false, rating);
+        this.setState({
+            toDos: this.state.toDos.concat(n)
+        });
     }
 
     render() {
@@ -21,10 +29,10 @@ export default class ToDoList extends Component {
             <div>
                 <ul>
                     {this.state.toDos.map(e =>
-                        <li key={e.id.toString()}><span className={elementClass(e.completed)}>{e.title}</span> <Rating NumberOfStars={e.rating} /></li>
+                        <li key={e.id.toString()}><span className={elementClass(e.completed)}>{e.title}</span> <Rating NumberOfStars={e.userId} /></li>
                     )}
                 </ul>
-                <ToDoInput />
+                <ToDoInput onClick={(t, r) => this.addToDo(t, r)}/>
             </div>
         );
     }
