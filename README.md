@@ -184,6 +184,84 @@ TODO APP
 
 ---
 
+## MODULE 075 | LIFTING STATE UP
+
+### M075 SLIDES
+
+react > components communication > lifting state up
+
+### M075 LINKS
+
+[lifting state up](https://reactjs.org/docs/lifting-state-up.html)
+
+### M075 LAB
+
+THEORY APP
+
+TODO APP
+
+## MODULE 076 | PROPS.CHILDREN
+
+### M076 SLIDES
+
+keine
+
+### M076 LINKS
+
+[containment](https://reactjs.org/docs/composition-vs-inheritance.html#containment)
+
+### M076 LAB
+
+THEORY APP
+
+TODO APP
+
+kein Beispiel
+
+---
+
+## MODULE 077 | COMPONENTS AS PROPS
+
+### M077 SLIDES
+
+keine
+
+### M077 LINKS
+
+[containment](https://reactjs.org/docs/composition-vs-inheritance.html#containment)
+
+### M077 LAB
+
+THEORY APP
+
+TODO APP
+
+---
+
+## MODULE 078 | SPECIALIZATION
+
+### M078 SLIDES
+
+keine
+
+### M078 LINKS
+
+[specialization](https://reactjs.org/docs/composition-vs-inheritance.html#specialization)
+
+### M078 LAB
+
+THEORY APP
+
+TODO APP
+
+---
+
+## MODULE 079 | COMPONENTS IN STATE
+
+Siehe Module Lifecycle Hooks - DateTime-Komponent im State von Greeter
+
+---
+
 ## MODULE 080 | HOOKS
 
 ### M080 SLIDES
@@ -199,103 +277,6 @@ THEORY APP
 TODO APP
 
 ---
-
-## 090 COMPONENTS COMPOSITION
-
-## MODULE 091 | LIFTING STATE UP
-
-### M091 SLIDES
-
-react > components communication > lifting state up
-
-### M091 LINKS
-
-[lifting state up](https://reactjs.org/docs/lifting-state-up.html)
-
-### M091 LAB
-
-THEORY APP
-
-TODO APP
-
----
-
-## MODULE 092 | PROPS.CHILDREN
-
-### M092 SLIDES
-
-keine
-
-### M092 LINKS
-
-[containment](https://reactjs.org/docs/composition-vs-inheritance.html#containment)
-
-### M092 LAB
-
-THEORY APP
-
-TODO APP
-
-kein Beispiel
-
----
-
-## MODULE 093 | COMPONENTS AS PROPS
-
-### M093 SLIDES
-
-keine
-
-### M093 LINKS
-
-[containment](https://reactjs.org/docs/composition-vs-inheritance.html#containment)
-
-### M093 LAB
-
-THEORY APP
-
-TODO APP
-
----
-
-## MODULE 094 | SPECIALIZATION
-
-### M094 SLIDES
-
-keine
-
-### M094 LINKS
-
-[specialization](https://reactjs.org/docs/composition-vs-inheritance.html#specialization)
-
-### M094 LAB
-
-THEORY APP
-
-TODO APP
-
----
-
-## MODULE 095 | COMPONENTS IN STATE
-
-### M095 SLIDES
-
-keine
-
-### M095 LINKS
-
-keine
-
-### M095 LAB
-
-THEORY APP
-
-kein Beispiel
-
-TODO APP
-
-Bauen Sie in die Komponente Greeter einen Button ein, durch den man DateTime verschwinden lässt
-
 ---
 
 ## MODULE 100 | REDUX
