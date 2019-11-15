@@ -1,11 +1,9 @@
 import React from 'react';
-import PasswordInput from './PasswordInput';
+import ReduxComp from './redux'
 
 function App() {
   return (
-    <div>
-      <PasswordInput />
-    </div>
+    <ReduxComp />
   );
 }
 
