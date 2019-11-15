@@ -277,16 +277,15 @@ THEORY APP
 TODO APP
 
 ---
----
 
-## MODULE 100 | REDUX
+## MODULE 090 | REDUX
 
-### M100 SLIDES
+### M090 SLIDES
 
 redux presentation
 
-### M100 LINKS
+### M090 LINKS
 
 [redux homepage](https://redux.js.org)
 
-### M100 LAB
+### M090 LAB
