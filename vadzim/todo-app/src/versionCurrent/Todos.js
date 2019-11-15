@@ -1,20 +1,63 @@
-import React from 'react';
-import Todo from './Todo';
+import React from "react";
 
-export default function Todos() {
-    let todos = [
-        new Todo(0, 'fahrrad reparieren', false, 2),
-        new Todo(1, 'einkaufen', true, 2),
-        new Todo(2, 'packet abholen', false, 2)
-     /*    {id: 0, title: 'fahrrad reparieren', done: false},
-        {id: 1, title: 'einkaufen', done: true},
-        {id: 2, title: 'packet abholen', done: false}, */
-    ]
-    return(
-        <ul>
-            {todos.map(todo => (
-                <li key={todo.id.toString()} className={todo.completed ? 'line-through' : 'none'}>{todo.title}</li>
+export default class Todos extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      todos: [
+        { id: 0, title: "fahrrad reparieren", completed: false },
+        { id: 1, title: "einkaufen", completed: true },
+        { id: 2, title: "packet abholen", completed: false }
+      ],
+      inputText: ""
+    };
+  }
+  handleChange(input){
+    this.setState({inputText: input})
+  }
+  addTodo() {
+    let newTodos = this.state.todos.slice();
+    newTodos.push({
+      id: newTodos.length,
+      title: this.state.inputText,
+      completed: false
+    })
+    this.setState({
+      todos: newTodos
+    })
+
+  }
+  
+  render() {
+    return (
+      <div>
+        <div>
+            
+        <input type="text" value={this.state.inputText} onChange={event => this.handleChange(event.target.value)}/>
+        <button onClick={() => this.addTodo()}>ADD</button>
+       
+        </div>
+
+        
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">title</th>
+            </tr>
+          </thead>
+          <tbody>
+            {this.state.todos.map(todo => (
+              <tr key={todo.id.toString()}>
+                <th scope="row">{todo.id.toString()}</th>
+                <td className={todo.completed ? "line-through" : "none"}>
+                  {todo.title}
+                </td>
+              </tr>
             ))}
-        </ul>
-    )
+          </tbody>
+        </table>
+      </div>
+    );
+  }
 }
