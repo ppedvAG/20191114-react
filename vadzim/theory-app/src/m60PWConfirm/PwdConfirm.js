@@ -1,4 +1,5 @@
 import React from "react";
+import { PrimaryButton } from 'office-ui-fabric-react';
 
 export default class PwdConfirm extends React.Component {
   constructor(props) {
@@ -19,9 +20,9 @@ export default class PwdConfirm extends React.Component {
     }
   }
   // handleClick(ev) {
-      // event object geht nicht automatisch rüber
-    handleClick() {
-      //console.log("button clicked " + ev.target)
+  // event object geht nicht automatisch rüber
+  handleClick() {
+    //console.log("button clicked " + ev.target)
     this.setState({
       cnfrmMessage: "Eingaben stimmen überein"
     });
@@ -48,6 +49,9 @@ export default class PwdConfirm extends React.Component {
             this.handleChange(event);
           }}
         />
+        <PrimaryButton
+          disabled={this.state.inp1Value !== this.state.inp2Value || this.state.inp1Value === ''}
+          onClick={() => this.handleClick()}>OK</PrimaryButton>
         <button
           disabled={this.state.inp1Value !== this.state.inp2Value || this.state.inp1Value === ''}
           onClick={() => this.handleClick()}

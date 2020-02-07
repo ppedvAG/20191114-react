@@ -1,12 +1,10 @@
 import { createStore } from 'redux';
 import React from 'react';
 
-
 /* COMPONENT AS A FUNCTION, makes more sense here */
 function App() {
 
-
-    /* Mit Hilfe von Reducern wird auf State zugegriffen und duch actions geändert */
+    /* Mit Hilfe von Reducern wird auf State zugegriffen und durch actions geändert */
     const myReducer = (state = 1, action) => {
         switch (action.type) {
             case 'MAL3':
@@ -20,6 +18,7 @@ function App() {
         }
     }
 
+    // Man will hier den State zu 10 bringen
     let myStore = createStore(myReducer);
     myStore.dispatch({ type: 'MAL3' });
     myStore.dispatch({ type: 'PLUS2' });
@@ -29,14 +28,9 @@ function App() {
 
     window.console.log(myStore.getState());
 
-
     return (
         <div>{myStore.getState()}</div>
 
     );
 }
-
 export default App;
-
-
-

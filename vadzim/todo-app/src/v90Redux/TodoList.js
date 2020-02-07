@@ -17,5 +17,8 @@ class TodoList extends Component {
         );
     }
 }
+// react-redux' connect ist eine Alternative zu store.dispatch
+// connect macht auch intern einige Optimierungen in Performance, deswegen ist vorzuziehen 
 export default connect((state) => ({ todos: state }))(TodoList)
+// Rückgabewert von connect ist eine Funktion, deswegen gleich ein Argument (TodoList)
 

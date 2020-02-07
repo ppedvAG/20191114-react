@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './module000/index.css';
+import './m00DefaultApp/index.css';
 // ohne Namensänderung
 // import { Banana } from './App';
 // mit Namensänderung
 // import * as serviceWorker from './serviceWorker';
 
 // 8. 
-import App from './moduleCurrent/App';
+// import App from './moduleCurrent/App';
+// import App from './m60PWConfirm/App';
+// import App from './m80ReduxSimple/App';
+import App from './m80ReduxSimpleV2/App';
+
 // import App from './moduleCurrent/AppWithClass';
 
 ReactDOM.render(<App />, document.getElementById('root'));
